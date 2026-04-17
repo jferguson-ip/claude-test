@@ -276,6 +276,147 @@
 
     a { color: #6366f1; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .team-card {
+      padding: 14px 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+    }
+
+    .team-card .person-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1a1a2e;
+    }
+
+    .team-card .person-title {
+      font-size: 0.78rem;
+      color: #6366f1;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .team-card .person-meta {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .founder-tag {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 9999px;
+      margin-left: 6px;
+      vertical-align: middle;
+      letter-spacing: 0.04em;
+    }
+
+    .team-section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #cbd5e1;
+      margin: 16px 0 8px;
+    }
+
+    .headcount-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 64px;
+      margin-top: 8px;
+    }
+
+    .hc-bar {
+      flex: 1;
+      background: #6366f1;
+      border-radius: 2px 2px 0 0;
+      opacity: 0.7;
+      transition: opacity 0.1s;
+      position: relative;
+    }
+
+    .hc-bar:hover { opacity: 1; }
+
+    .hc-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4px;
+      font-size: 0.7rem;
+      color: #94a3b8;
+    }
+
+    .growth-stats {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .growth-stat .g-val {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .growth-stat .g-label {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+
+    .competitor-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .competitor-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+
+    .competitor-row .comp-name {
+      font-weight: 600;
+      color: #1a1a2e;
+      min-width: 160px;
+    }
+
+    .competitor-row .comp-location {
+      color: #94a3b8;
+      flex: 1;
+    }
+
+    .competitor-row .comp-funding {
+      font-weight: 600;
+      color: #374151;
+      text-align: right;
+    }
+
+    .sim-score {
+      font-size: 0.72rem;
+      color: #6366f1;
+      font-weight: 600;
+      min-width: 40px;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -311,6 +452,54 @@
       </p>
     </div>
 
+    <!-- Team -->
+    <div class="card">
+      <h2>Team</h2>
+
+      <div class="team-section-label">Founders</div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="person-name">Thomas Celen <span class="founder-tag">FOUNDER</span></div>
+          <div class="person-title">CEO</div>
+          <div class="person-meta">Masters, Accounting · Lessius University College · Since 2015</div>
+        </div>
+        <div class="team-card">
+          <div class="person-name">Wouter Schoofs <span class="founder-tag">FOUNDER</span></div>
+          <div class="person-title">CTO</div>
+          <div class="person-meta">Multimedia &amp; IT/Management · Karel de Grote &amp; Thomas More · Since 2015</div>
+        </div>
+      </div>
+
+      <div class="team-section-label" style="margin-top:20px;">Leadership &amp; Board</div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="person-name">Lorin Despiegelaere</div>
+          <div class="person-title">CEO</div>
+          <div class="person-meta">Joined 2025</div>
+        </div>
+        <div class="team-card">
+          <div class="person-name">Stijn Menu</div>
+          <div class="person-title">COO</div>
+          <div class="person-meta">Joined 2024</div>
+        </div>
+        <div class="team-card">
+          <div class="person-name">Göran van Hese</div>
+          <div class="person-title">COO</div>
+          <div class="person-meta">Joined 2023</div>
+        </div>
+        <div class="team-card">
+          <div class="person-name">Christoph Neut</div>
+          <div class="person-title">Board Member</div>
+          <div class="person-meta">KU Leuven / ULB · Joined 2022</div>
+        </div>
+        <div class="team-card">
+          <div class="person-name">Gaëtan Baudelet</div>
+          <div class="person-title">Board Observer</div>
+          <div class="person-meta">Noshaq · Joined 2019</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Key Stats -->
     <div class="card">
       <h2>Key Stats</h2>
@@ -339,6 +528,52 @@
           <div class="value">B2B SaaS</div>
           <div class="label">Model</div>
         </div>
+      </div>
+    </div>
+
+    <!-- Growth -->
+    <div class="card">
+      <h2>Growth</h2>
+      <div class="growth-stats">
+        <div class="growth-stat">
+          <div class="g-val">17</div>
+          <div class="g-label">Current Headcount</div>
+        </div>
+        <div class="growth-stat">
+          <div class="g-val">29</div>
+          <div class="g-label">Peak Headcount (early 2023)</div>
+        </div>
+        <div class="growth-stat">
+          <div class="g-val">Top Half</div>
+          <div class="g-label">Website Traffic vs Peers</div>
+        </div>
+      </div>
+      <div style="font-size:0.75rem;color:#94a3b8;margin-bottom:6px;">Headcount over time</div>
+      <div class="headcount-chart">
+        <!-- bars scaled to max=29; values: 5,12,13,15,18,18,27,29,24,24,24,22,23,20,20,22,21,20,20,19,19,17 -->
+        <div class="hc-bar" style="height:17%" title="Oct 2019: 5"></div>
+        <div class="hc-bar" style="height:41%" title="Jul 2020: 12"></div>
+        <div class="hc-bar" style="height:45%" title="Jan 2021: 13"></div>
+        <div class="hc-bar" style="height:52%" title="Apr 2021: 15"></div>
+        <div class="hc-bar" style="height:62%" title="Sep 2021: 18"></div>
+        <div class="hc-bar" style="height:62%" title="Feb 2022: 18"></div>
+        <div class="hc-bar" style="height:93%" title="Feb 2023: 27"></div>
+        <div class="hc-bar" style="height:100%" title="Mar 2023: 29"></div>
+        <div class="hc-bar" style="height:83%" title="Jun 2023: 24"></div>
+        <div class="hc-bar" style="height:83%" title="Oct 2023: 24"></div>
+        <div class="hc-bar" style="height:76%" title="Jan 2024: 22"></div>
+        <div class="hc-bar" style="height:69%" title="Apr 2024: 20"></div>
+        <div class="hc-bar" style="height:76%" title="Sep 2024: 22"></div>
+        <div class="hc-bar" style="height:72%" title="Dec 2024: 21"></div>
+        <div class="hc-bar" style="height:69%" title="Feb 2025: 20"></div>
+        <div class="hc-bar" style="height:66%" title="May 2025: 19"></div>
+        <div class="hc-bar" style="height:66%" title="Oct 2025: 19"></div>
+        <div class="hc-bar" style="height:59%" title="Mar 2026: 17"></div>
+      </div>
+      <div class="hc-labels">
+        <span>Oct 2019</span>
+        <span>Post-Series A peak</span>
+        <span>Mar 2026</span>
       </div>
     </div>
 
@@ -399,6 +634,43 @@
           Christoph Neut
         </div>
 
+      </div>
+    </div>
+
+    <!-- Competitors -->
+    <div class="card">
+      <h2>Comparable Companies</h2>
+      <div class="competitor-list">
+        <div class="competitor-row">
+          <span class="comp-name">deskbird</span>
+          <span class="comp-location">St. Gallen · Enterprise Software</span>
+          <span class="comp-funding">€40.2M raised</span>
+          <span class="sim-score">63%</span>
+        </div>
+        <div class="competitor-row">
+          <span class="comp-name">BlueSense Solutions</span>
+          <span class="comp-location">The Hague · Enterprise Software</span>
+          <span class="comp-funding">—</span>
+          <span class="sim-score">65%</span>
+        </div>
+        <div class="competitor-row">
+          <span class="comp-name">Breakroom</span>
+          <span class="comp-location">Reykjavík · Enterprise Software</span>
+          <span class="comp-funding">—</span>
+          <span class="sim-score">65%</span>
+        </div>
+        <div class="competitor-row">
+          <span class="comp-name">Capella Workplace Solutions</span>
+          <span class="comp-location">Dublin · Jobs &amp; Recruitment</span>
+          <span class="comp-funding">—</span>
+          <span class="sim-score">63%</span>
+        </div>
+        <div class="competitor-row">
+          <span class="comp-name">Evenness</span>
+          <span class="comp-location">Amsterdam · Event Tech</span>
+          <span class="comp-funding">—</span>
+          <span class="sim-score">59%</span>
+        </div>
       </div>
     </div>
 
